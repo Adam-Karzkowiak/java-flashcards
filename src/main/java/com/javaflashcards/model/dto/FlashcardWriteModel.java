@@ -1,6 +1,6 @@
 package com.javaflashcards.model.dto;
 
-class FlashcardWriteModel {
+public class FlashcardWriteModel {
     String answer;
     String question;
 }

@@ -1,5 +1,5 @@
 package com.javaflashcards.model.dto;
 
-class FlashcardQuestionReadModel {
+public class FlashcardQuestionReadModel {
     String question;
 }
