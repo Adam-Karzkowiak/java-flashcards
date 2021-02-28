@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 
 @Entity
-class Flashcard {
+public class Flashcard {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
