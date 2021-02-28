@@ -1,11 +1,8 @@
 package com.javaflashcards.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-
+@Table(name = "flashcards")
 @Entity
 public class Flashcard {
     @Id
