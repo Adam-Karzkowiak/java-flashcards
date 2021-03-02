@@ -1,7 +1,6 @@
 package com.javaflashcards.controller;
 
 import com.javaflashcards.model.Flashcard;
-import com.javaflashcards.model.dto.FlashcardWriteModel;
 import com.javaflashcards.service.FlashcardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
