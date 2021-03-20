@@ -6,6 +6,7 @@ import com.javaflashcards.model.dto.FlashcardQuestionReadModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Random;
 
 
@@ -26,7 +27,16 @@ public class FlashcardService {
         Random random = new Random();
         Long maxValue = flashcardRepository.count();
         int id = random.nextInt(Math.toIntExact(maxValue)) + 1;
-        Flashcard flashcard = flashcardRepository.getOne(id);
+        Flashcard flashcard = flashcardRepository.findById(id).get();
         return FlashcardQuestionReadModel.create(flashcard.getQuestion());
     }
+
+    public List<Flashcard> showAllFlashcards() {
+        return flashcardRepository.findAll();
+    }
+
+    public Flashcard findOneById(int id){
+        return flashcardRepository.findById(id).get();
+    }
+
 }
