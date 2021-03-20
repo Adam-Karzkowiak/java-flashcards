@@ -1,7 +1,10 @@
 package com.javaflashcards.model.dto;
 
+import lombok.Data;
+
+@Data
 public class FlashcardQuestionReadModel {
-    String question;
+    final String question;
 
     private FlashcardQuestionReadModel(String question) {
         this.question = question;
