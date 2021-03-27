@@ -28,14 +28,14 @@ public class FlashcardService {
         Long maxValue = flashcardRepository.count();
         int id = random.nextInt(Math.toIntExact(maxValue)) + 1;
         Flashcard flashcard = flashcardRepository.findById(id).get();
-        return FlashcardQuestionReadModel.create(flashcard.getQuestion());
+        return FlashcardQuestionReadModel.create(flashcard.getId(),flashcard.getQuestion());
     }
 
     public List<Flashcard> showAllFlashcards() {
         return flashcardRepository.findAll();
     }
 
-    public Flashcard findOneById(int id){
+    public Flashcard findOneById(int id) {
         return flashcardRepository.findById(id).get();
     }
 
