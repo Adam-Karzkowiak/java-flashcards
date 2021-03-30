@@ -1,7 +1,9 @@
 package com.javaflashcards.model;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -12,6 +14,8 @@ import java.util.Set;
 @Entity
 @Data
 @Table(name = "app_users")
+@AllArgsConstructor
+@NoArgsConstructor
 class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
