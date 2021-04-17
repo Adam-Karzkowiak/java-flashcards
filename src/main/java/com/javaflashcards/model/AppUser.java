@@ -16,7 +16,7 @@ import java.util.Set;
 @Table(name = "app_users")
 @AllArgsConstructor
 @NoArgsConstructor
-class AppUser {
+public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
