@@ -1,6 +1,7 @@
 package com.javaflashcards.controller;
 
 import com.javaflashcards.model.Flashcard;
+import com.javaflashcards.model.dto.FlashcardAnswerReadModel;
 import com.javaflashcards.model.dto.FlashcardQuestionReadModel;
 import com.javaflashcards.service.FlashcardService;
 import org.slf4j.Logger;
@@ -33,6 +34,11 @@ public class FlashcardController {
     @GetMapping("/flashcards")
     public ResponseEntity<FlashcardQuestionReadModel> randomFlashcardQuestion() {
         return ResponseEntity.ok(flashcardService.randomFlashcard());
+    }
+
+    @PostMapping("/flashcards")
+    public ResponseEntity<FlashcardAnswerReadModel> flashcardAnswer(FlashcardQuestionReadModel question) {
+        return ResponseEntity.ok(flashcardService.getAnswer(question));
     }
 
     @GetMapping("/all")
