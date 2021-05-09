@@ -36,7 +36,7 @@ public class FlashcardController {
         return ResponseEntity.ok(flashcardService.randomFlashcard());
     }
 
-    @PostMapping("/flashcards")
+    @PostMapping("/flashcards/answ")
     public ResponseEntity<FlashcardAnswerReadModel> flashcardAnswer(FlashcardQuestionReadModel question) {
         return ResponseEntity.ok(flashcardService.getAnswer(question));
     }
